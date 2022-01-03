@@ -1,4 +1,4 @@
-package com.hamdytechy;
+package com.hamdytechy.login;
 
 public class UserValidationService {
 	

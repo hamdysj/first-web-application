@@ -10,7 +10,7 @@
 
 <!-- We can use Scriplet(<%%>) to write ava code on a jsp page BUT it is not a good practice -->
 <font size=10, color="red"> ${errorMessage}</font>
-<form action="/spring-mvc/login" method="post">
+<form action="/login" method="post">
 Username: <input type="text" name="name" />
 Password: <input type="password" name="password" />
 <input type = "submit" value="Login" />

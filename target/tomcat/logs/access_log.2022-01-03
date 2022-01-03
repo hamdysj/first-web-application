@@ -1,0 +1,5 @@
+127.0.0.1 - - [03/Jan/2022:15:18:59 +0100] "GET / HTTP/1.1" 200 504 http-bio-8080-exec-1 916
+127.0.0.1 - - [03/Jan/2022:15:18:59 +0100] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8080-exec-2 3
+127.0.0.1 - - [03/Jan/2022:15:19:08 +0100] "GET /spring-mvc/login HTTP/1.1" 200 504 http-bio-8080-exec-3 39
+127.0.0.1 - - [03/Jan/2022:15:19:08 +0100] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8080-exec-4 2
+127.0.0.1 - - [03/Jan/2022:15:42:22 +0100] "POST /spring-mvc/login HTTP/1.1" 200 218 http-bio-8080-exec-6 312

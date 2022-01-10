@@ -14,6 +14,7 @@ public class TodoService{
 	private static List<Todo> todos = new ArrayList<Todo>();
 	private static int todoCount = 3;
 
+	//static block initialization
 	static {
 		todos.add(new Todo(1, "in28Minutes", "Learn Spring MVC", new Date(),
 				false));
@@ -22,6 +23,7 @@ public class TodoService{
 				false));
 	}
 
+	//View all Todo
 	public List<Todo> retrieveTodos(String user) {
 		List<Todo> filteredTodos = new ArrayList<Todo>();
 		for (Todo todo : todos) {
@@ -31,10 +33,13 @@ public class TodoService{
 		return filteredTodos;
 	}
 
+	//Add Todo
 	public void addTodo(String name, String desc, Date targetDate, boolean isDone) {
 		todos.add(new Todo(++todoCount, name, desc, targetDate, isDone));
 	}
 
+	
+	//Delete Todo
 	public void deleteTodo(int id) {
 		Iterator<Todo> iterator = todos.iterator();
 		while (iterator.hasNext()) {

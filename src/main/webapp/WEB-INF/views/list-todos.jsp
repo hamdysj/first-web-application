@@ -9,8 +9,11 @@
 <body>
 
 <!-- We can use Scriplet(<%%>) to write ava code on a jsp page BUT it is not a good practice -->
-
+Hi ${name} <br>
 Your Todos are ${todos}
+
+<br>
+<a class-"button" href="/add-todo"> Add Todo </a>
 
 </body>
 </html>

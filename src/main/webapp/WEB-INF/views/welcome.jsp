@@ -8,7 +8,8 @@
 </head>
 <body>
 
-Welcome to JSP ${name} and password is ${password}
+Welcome to JSP ${name} and password is ${password}, 
+<br> <a href="/list-todos">Manage your todos</a>  </br>
 
 </body>
 </html>

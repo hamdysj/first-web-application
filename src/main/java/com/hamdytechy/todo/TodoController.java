@@ -15,37 +15,26 @@ import com.hamdytechy.login.UserValidationService;
 @SessionAttributes("name")
 public class TodoController {
 	
-	/*
-	 * Login Service
-	@Autowired
-	UserValidationService service;
-	
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public String showLoginPage() {
-		return "Login";
-	}
-	
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String handleLoginRequest(@RequestParam String name, 
-			@RequestParam String password, ModelMap model) {
-		if(!service.isUserValid(name, password))
-		{
-			model.put("errorMessage", "Invalid Credentials");
-			return "Login";	
-		}
-		
-		model.put("name", name);
-		model.put("password", password);
-		return "welcome";
-	} */
 	
 	@Autowired
 	TodoService service;
 	
 	@RequestMapping(value = "/list-todos", method = RequestMethod.GET)
-	public String showLoginPage(ModelMap model) {
+	public String showTodo(ModelMap model) {
 		model.addAttribute("todos", service.retrieveTodos("in28Minutes"));
 		return "list-todos";
+	}
+	
+	//Form on Display
+	@RequestMapping(value = "/add-todo", method = RequestMethod.GET)
+	public String ViewTodo() {
+		return "todo";
+	}
+	
+	//Form Page on Submission
+	@RequestMapping(value = "/add-todo", method = RequestMethod.POST)
+	public String AddTodo() {
+		return "redirect:list-todos";
 	}
 	
 }

@@ -34,9 +34,9 @@ public class TodoController {
 	
 	//Form Page on Submission
 	@RequestMapping(value = "/add-todo", method = RequestMethod.POST)
-	public String AddTodo(ModelMap model, @RequestParam String desc) {
-		service.addTodo("in28minutes", desc, new Date(), false);
-		model.clear();
+	public String AddTodo(ModelMap model, Todo todo) {
+		service.addTodo("in28minutes", todo.getDesc(), new Date(), false);
+		//model.clear();
 		return "redirect:list-todos";
 	}
 	

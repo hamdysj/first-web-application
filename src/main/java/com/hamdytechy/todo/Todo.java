@@ -1,14 +1,23 @@
 package com.hamdytechy.todo;
 
 import java.util.Date;
+import javax.validation.constraints.Size;
 
 public class Todo {
 	
 	private int id;
 	private String user;
+	
+	//Validation
+	@Size(min = 10, message = "Enter at least 10 characters")
 	private String desc;
+	
+	
 	private Date targetDate;
 	private boolean isDone;
+	
+	public Todo() {
+	}
 	
 	public Todo(int id, String user, String desc, Date targetDate, boolean isDone) {
 		super();

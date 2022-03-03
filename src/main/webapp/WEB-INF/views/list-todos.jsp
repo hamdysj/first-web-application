@@ -28,7 +28,10 @@ Hi ${name} <br/>
 	<td>${todo.id}</td>
 	<td>${todo.desc}</td>
 	<td>${todo.user}</td>
-	<td><a href="/delete-todo?id=${todo.id}" class = "btn btn-danger"> Delete </a></td>
+	<td>
+	<a href="/update-todo?id=${todo.id}" class="btn btn-primary" >Edit</a>
+	<a href="/delete-todo?id=${todo.id}" class = "btn btn-danger"> Delete </a>
+	</td>
 	</tr>
 </c:forEach>
 </tbody>
